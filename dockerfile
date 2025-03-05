@@ -14,10 +14,8 @@ RUN pip3 install poetry==1.8.4
 
 RUN poetry config virtualenvs.in-project true
 
-# Export the main-only requirements to a file for installation
 RUN poetry export --only main --without-hashes --output /tmp/requirements.txt
 
-# Install the requirements in the virtual environment
 RUN pip install -r /tmp/requirements.txt
 
 EXPOSE 80
