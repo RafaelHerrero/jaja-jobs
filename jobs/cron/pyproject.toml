@@ -7,12 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-apscheduler = "^3.11.0"
-fastapi = "^0.115.11"
-uvicorn = "^0.34.0"
 requests = "^2.32.3"
-pytz = "^2025.1"
-
 
 [build-system]
 requires = ["poetry-core"]
