@@ -1,5 +1,5 @@
 import requests
-from src.config import Config
+from config import Config
 import time
 
 
@@ -11,6 +11,7 @@ def cron_job():
         requests.get(f'{config.BACKEND_URL}/recurring-transaction/create-recurring-transactions', headers={'X-API-KEY': config.API_KEY})
         print('recurring transaction endpoint called')
         counter += 1
+        print(f'waiting for 20 seconds before next call')
         time.sleep(20)
     return
 
